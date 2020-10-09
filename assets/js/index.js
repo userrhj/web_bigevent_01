@@ -22,7 +22,7 @@ $(function () {
 
 
 //请求用户信息   因为别的文件也要用  所以写在入口函数外面让他变为全局函数
-
+//更新用户信息和头像
 function getUserInfo() {
     $.ajax({
         method: "GET",
