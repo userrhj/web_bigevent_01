@@ -96,8 +96,11 @@ $(function () {
                 }
                 layer.msg(res.message);
                 // 发布文章成功后，跳转到文章列表页面
+
                 // location.href = "/article/art_list.html"
                 window.parent.document.querySelector("#art_list").click();
+
+                // location.href = "/article/art_list.html"
             }
         })
     }
