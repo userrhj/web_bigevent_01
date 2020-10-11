@@ -1,5 +1,5 @@
 $(function () {
-    // 自定义密码验证
+    // 1.1  自定义密码验证
     var form = layui.form;
     form.verify({
         pwd: [
@@ -18,7 +18,7 @@ $(function () {
         }
     })
 
-    // 发起请求 重置密码
+    // 2.1 发起请求 重置密码
     $(".layui-form").on("submit", function (e) {
         e.preventDefault();
         $.ajax({

@@ -2,7 +2,7 @@ $(function () {
     getUserInfo();
 
 
-    // 退出功能
+    // 3 退出功能
     //获取layui中的layer对象
     var layer = layui.layer;
     $('#btnLogout').on('click', function () {
@@ -21,7 +21,7 @@ $(function () {
 
 
 
-//请求用户信息   因为别的文件也要用  所以写在入口函数外面让他变为全局函数
+// 1.1  请求用户信息   因为别的文件也要用  所以写在入口函数外面让他变为全局函数
 //更新用户信息和头像
 function getUserInfo() {
     $.ajax({
@@ -53,7 +53,7 @@ function getUserInfo() {
     })
 }
 
-// 渲染用户信息页面
+// 1.2  渲染用户信息页面
 function renderAvatar(user) {
     //获取用户名称  有昵称用昵称  没有就用登录名
     var name = user.nickname || user.username;

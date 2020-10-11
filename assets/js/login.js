@@ -1,10 +1,10 @@
 $(function () {
-    //点击去注册事件 显示注册 隐藏登录
+    // 1.1 点击去注册事件 显示注册 隐藏登录
     $('#link_reg').on('click', function () {
         $('.login-box').hide();
         $('.reg-box').show();
     })
-    //点击去登录事件 显示登录 隐藏注册
+    // 1.2 点击去登录事件 显示登录 隐藏注册
     $('#link_login').on('click', function () {
         $('.login-box').show();
         $('.reg-box').hide();
@@ -19,7 +19,7 @@ $(function () {
     var form = layui.form;
     //从layui中导出layer对象
     var layer = layui.layer;
-    //自定义校验规则
+    // 2 自定义校验规则
     form.verify({
         //这里的对象属性将成为规则名称
         pwd: [
@@ -36,7 +36,7 @@ $(function () {
     })
 
 
-    //监听注册事件
+    // 3 监听注册事件
     $("#form_reg").on('submit', function (e) {
         e.preventDefault();
         $.ajax({
@@ -54,7 +54,7 @@ $(function () {
                 //模拟点击去登录事件
                 $('#link_login').click();
                 //重置表单
-                $('#link_reg')[0].reset();
+                $('#form_reg')[0].reset();
             }
         })
     })
@@ -62,7 +62,7 @@ $(function () {
 
 
 
-    //监听注册事件
+    // 4 监听登录事件
     $("#form_login").on('submit', function (e) {
         e.preventDefault();
         $.ajax({

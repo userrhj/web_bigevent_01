@@ -12,11 +12,11 @@ $(function () {
     // 1.3 创建裁剪区域
     $image.cropper(options)
 
-    //绑定上传事件
+    // 2.1 绑定上传事件
     $("#btnChoseImage").on('click', function () {
         $("#file").click();
     })
-    //2选择图片 修改图片
+    // 2.2 选择图片 修改图片
     var layer = layui.layer;
     $("#file").on("change", function (e) {
         //获取用户选择的文件 是一个伪数组
@@ -36,7 +36,7 @@ $(function () {
 
     })
 
-    // 3上传头像
+    // 3 上传头像
     $("#btnUpload").on('click', function () {
         var dataURL = $image
             .cropper('getCroppedCanvas', { // 创建一个 Canvas 画布
@@ -44,9 +44,6 @@ $(function () {
                 height: 100
             })
             .toDataURL('image/png')       // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
-
-
-
         // 发起请求
         $.ajax({
             method: "POST",
@@ -65,7 +62,7 @@ $(function () {
         })
     })
 
-    // 渲染默认头像
+    // 4  渲染默认头像
     getUserInfo()
     function getUserInfo() {
         $.ajax({
