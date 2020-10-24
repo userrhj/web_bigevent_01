@@ -1,6 +1,6 @@
 $(function () {
     //开发服务器地址
-    var baseURl = 'http://127.0.0.1:3007';
+    var baseURl = 'http://ajax.frontend.itheima.net';
     //测试环境服务器地址
     // var baseURl = 'http://ajax.frontend.itheima.net';
     //生产环境服务器地址
